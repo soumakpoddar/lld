@@ -1,14 +1,10 @@
 package org.example.Observer;
 
-import org.example.Observable.StocksObservable;
-
 public class MobileAlertObserverImpl implements NotificationAlertObserver {
     String deviceId;
-    StocksObservable observable;
 
-    public MobileAlertObserverImpl(String deviceId, StocksObservable observable) {
+    public MobileAlertObserverImpl(String deviceId) {
         this.deviceId = deviceId;
-        this.observable = observable;
     }
 
     @Override
