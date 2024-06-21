@@ -18,8 +18,11 @@ public class MyHashMap<K, V> {
     // s * log(2) >= log(capacity)
     // s >= log(capacity) / log(2)
     private int getTableSize(int capacity) {
+        if (capacity >= MAXIMUM_CAPACITY) {
+            return MAXIMUM_CAPACITY;
+        }
         int s = (int) (Math.log(capacity) / Math.log(2));
-        return Math.pow(2, capacity) == capacity ? capacity : (int) Math.pow(2, s + 1);
+        return Math.pow(2, capacity) == capacity ? capacity : (int) Math.max(Math.pow(2, s + 1), MAXIMUM_CAPACITY);
     }
 
     private class Entry<K, V> {
