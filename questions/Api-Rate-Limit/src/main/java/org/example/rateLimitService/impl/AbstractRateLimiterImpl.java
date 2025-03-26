@@ -2,6 +2,7 @@ package org.example.rateLimitService.impl;
 
 import org.example.rateLimitService.IRateLimiter;
 
+// using template design pattern to implement the rate limiter common functions and leave the specific implementation to the subclass
 public abstract class AbstractRateLimiterImpl implements IRateLimiter {
     protected int maxRequests;
     protected long windowSizeInMillis;

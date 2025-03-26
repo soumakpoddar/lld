@@ -5,6 +5,7 @@ import org.example.rateLimitService.IRateLimiter;
 import java.util.ArrayList;
 import java.util.List;
 
+// using observer design pattern to notify rate limiters when the config changes
 public class RateLimiterConfig {
     private int maxRequests;
     private long windowSizeInMillis;

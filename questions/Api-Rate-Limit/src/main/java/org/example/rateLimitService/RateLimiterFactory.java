@@ -4,6 +4,7 @@ import org.example.rateLimitService.config.RateLimiterConfig;
 import org.example.rateLimitService.impl.FixedWindowRateLimiter;
 import org.example.rateLimitService.impl.SlidingWindowRateLimiter;
 
+// using factory design pattern to create rate limiter based on type
 public class RateLimiterFactory {
     public static IRateLimiter createRateLimiter(String type, RateLimiterConfig rateLimiterConfig) {
         IRateLimiter rateLimiter;
